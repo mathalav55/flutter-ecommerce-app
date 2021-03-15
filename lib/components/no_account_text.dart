@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shopping/constants.dart';
+import 'package:shopping/screens/sign_up/sign_up_screen.dart';
 import 'package:shopping/size_config.dart';
 
 class NoAccountText extends StatelessWidget {
@@ -21,11 +22,16 @@ class NoAccountText extends StatelessWidget {
         SizedBox(
           width: getProportionateScreenWidth(15),
         ),
-        Text("Sign Up",
-            style: TextStyle(
-              fontSize: getProportionateScreenWidth(16),
-              color: kPrimaryColor,
-            ))
+        GestureDetector(
+          onTap: () {
+            Navigator.pushNamed(context, SignUpScreen.routeName);
+          },
+          child: Text("Sign Up",
+              style: TextStyle(
+                fontSize: getProportionateScreenWidth(16),
+                color: kPrimaryColor,
+              )),
+        )
       ],
     );
   }
