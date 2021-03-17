@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shopping/components/no_account_text.dart';
 import 'package:shopping/components/social_card.dart';
-import 'package:shopping/screens/sign_in/components.dart/sign_in_form.dart';
+import 'package:shopping/screens/sign_in/components/sign_in_form.dart';
 import 'package:shopping/size_config.dart';
 
 class Body extends StatelessWidget {

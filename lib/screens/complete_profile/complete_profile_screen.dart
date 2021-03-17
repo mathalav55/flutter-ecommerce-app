@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shopping/screens/complete_profile/components/body.dart';
 
 class CompleteProfileScreen extends StatelessWidget {
   static String routeName = "/complete_profile";
@@ -7,7 +8,9 @@ class CompleteProfileScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text("SignUp"),
+        centerTitle: true,
       ),
+      body: Body(),
     );
   }
 }
