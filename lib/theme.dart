@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shopping/constants.dart';
+import 'package:shopping/size_config.dart';
 
 ThemeData theme() {
   return ThemeData(
@@ -49,4 +50,20 @@ AppBarTheme appBarTheme() {
       textTheme: TextTheme(
         headline6: TextStyle(color: Color(0XFF8B8B8B), fontSize: 16),
       ));
+}
+
+InputDecoration otpInputDecoration() {
+  return InputDecoration(
+      contentPadding:
+          EdgeInsets.symmetric(vertical: getProportionateScreenHeight(15)),
+      enabledBorder: otpOutlineInputBorder(),
+      focusedBorder: otpOutlineInputBorder(),
+      border: otpOutlineInputBorder());
+}
+
+OutlineInputBorder otpOutlineInputBorder() {
+  return OutlineInputBorder(
+    borderRadius: BorderRadius.circular(15),
+    borderSide: BorderSide(color: kTextColor),
+  );
 }

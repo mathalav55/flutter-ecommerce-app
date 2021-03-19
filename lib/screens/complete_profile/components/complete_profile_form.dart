@@ -3,6 +3,7 @@ import 'package:shopping/components/custom_suffix_icon.dart';
 import 'package:shopping/components/default_button.dart';
 import 'package:shopping/components/form_error.dart';
 import 'package:shopping/constants.dart';
+import 'package:shopping/screens/otp_screen/otp_screen.dart';
 import 'package:shopping/size_config.dart';
 
 class CompleteProfileForm extends StatefulWidget {
@@ -67,6 +68,7 @@ class _CompleteProfileFormState extends State<CompleteProfileForm> {
             press: () {
               if (_formKey.currentState.validate()) {
                 //go to OTP screen
+                Navigator.pushNamed(context, OTPVerificationScreen.routeName);
               }
             },
           )
@@ -145,13 +147,13 @@ class _CompleteProfileFormState extends State<CompleteProfileForm> {
       keyboardType: TextInputType.name,
       onChanged: (value) {
         if (value.isNotEmpty) {
-          removeError(error: kNamelNullError);
+          removeError(error: kNameNullError);
         }
         return null;
       },
       validator: (value) {
         if (value.isEmpty) {
-          addError(error: kNamelNullError);
+          addError(error: kNameNullError);
         }
         return null;
       },
